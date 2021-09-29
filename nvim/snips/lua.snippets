@@ -1,0 +1,59 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet setTimerMTA "Set a Timer/Delay Function" b
+setTimer(function() end,${1:time},1)
+endsnippet
+
+snippet getSome "Make a get Constructor" b
+function get${1:Name}()
+	return ${2:Variable}
+end
+endsnippet
+
+snippet setSome "Make a set Constructor" b
+function set${1:Name}(${2:Parameters})
+	${3:GlobalVariable} = $2
+end
+endsnippet
+
+snippet documentMTA "Document the code with template" b
+---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---
+---|                                                                               |---
+---|         Script by "Kyonax - Pilar Perfeccionista" Synchronous member          |---
+---|       Github: https://github.com/Kyonax • G-Mail: kyonax.corp@gmail.com       |---
+---|                     Code Script from Montgomery Country RP                    |---
+---|                            Resource-Script: [${1:ResourceScript}]                            |---
+---|                           Name-Script: [${2:NameScript}]                           |---
+---|         Function-Script: ${3:Description}          |---
+---|                                                                               |---
+---|                            DEV-DATE: ${4:Date}                               |---
+---|                               Client Script                                   |---
+---|                                number: ${5:Number}                                    |---
+---|                                MIT License                                    |---
+---|                                                                               |---
+---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---•---
+endsnippet
