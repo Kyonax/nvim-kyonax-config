@@ -62,4 +62,4 @@ if filereadable(fnameescape(s:local_vimrc))
   endif
   unlet! s:local_vimrc
 
-
+let g:python3_host_prog = 'C:/Program Files/Python39/python.exe'

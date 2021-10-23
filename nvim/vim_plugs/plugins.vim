@@ -41,7 +41,7 @@ Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 "Update
 Plug 'tweekmonster/gofmt.vim'
-Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vuciv/vim-bujo'
 Plug 'tpope/vim-dispatch'
@@ -52,15 +52,26 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 "Telescope Plugins
-Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
-
+Plug 'fannheyward/telescope-coc.nvim'
+"Vundle for PY
+Plug 'gmarik/Vundle.vim'
 "Buffer Navigation
 Plug 'ctrlpvim/ctrlp.vim'
+"Themes
+Plug 'ghifarit53/tokyonight-vim'
+"C# Development
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'valloric/MatchTagAlways'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 
+set termguicolors
 
-colorscheme gruvbox
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 set background=dark
 
 if executable('rg')
@@ -72,4 +83,5 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
 let g:ctrlp_use_caching = 0
+
 

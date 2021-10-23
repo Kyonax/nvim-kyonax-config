@@ -15,18 +15,9 @@ source ~/AppData/Local/nvim/plug-config/sneak.vim
 source ~/AppData/Local/nvim/plug-config/quickscope.vim
 "WhichKey
 source ~/AppData/Local/nvim/keys/which-key.vim
+"Telescope
+source ~/AppData/Local/nvim/plug-config/telescope.vim
 "Lua Plugins
 luafile ~/AppData/Local/nvim/lua/plug-colorizer.lua
 
-"Init Codes for NVIM
 
-"Telescope Addons
-lua << EOF
-require('telescope').setup{
-    defaults = {
-        prompt_prefix = "$ "
-    
-    }
-}
-require('telescope').load_extension('fzf')
-EOF
